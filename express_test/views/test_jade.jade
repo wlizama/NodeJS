@@ -1,0 +1,14 @@
+html(lang="es")
+	head
+		title Prueba JADE Templates
+	body
+		// comentario visible en el CLIENTE
+		h1= my_var
+		p= unescaped
+		a(href="https://pugjs.org/language/code.html" target="_blank") JADE Documentation
+		//- comentario visible en el SERVER
+		p.
+			Lorem ipsum dolor sit amet, consectetur #[i|#[a(href="#") LINK DENTRO DE P]] adipisicing elit. Modi blanditiis mollitia consequatur suscipit, natus possimus totam rem eius, debitis aliquam culpa facere cupiditate nobis maiores ab quisquam optio magni dicta?
+		ul
+			-for (var i = 0; i < 100; i++)
+				li elemento #{i+1} posc [#{i}]
